@@ -42,7 +42,7 @@ public class MyVisitorTest {
         assertEquals(result.get(1).getAnimations().get(0).getAnimationrotation() , "-90.0");
         assertEquals(result.get(1).getAnimations().get(0).getAnimationlooping() , "yes");
         assertEquals(result.get(1).getAnimations().get(0).getAnimationtime() , "0.75");
-        assertEquals(result.get(1).getAnimations().get(0).getAnimationdelay() , "0");
+        assertEquals(result.get(1).getAnimations().get(0).getAnimationdelay() , "tttt");
         assertEquals(result.get(1).getAnimations().get(0).getAnimationblendmode() , "\"add\"");
         assertEquals(result.get(1).getAnimations().get(0).getAnimationtype() , "\"scrolling\"");
         assertEquals(result.get(1).getAnimations().get(0).getAnimationrotationoffset() , " x = 0.0 y = 0.0 ");
