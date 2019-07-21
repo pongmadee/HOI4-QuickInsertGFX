@@ -4,4 +4,7 @@
 # HOI4-QuickInsertGFX
 ## Supports GFX files : eventpictures.gfx , goals.gfx , goals_shine.gfx
 
-tutorials...coming soon.
+### Concept
+<img src="images/HOI4-QuickInsertGFX-Concept.png" width="80%">
+
+More tutorials...coming soon.
