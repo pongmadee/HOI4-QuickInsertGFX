@@ -6,6 +6,6 @@ Supports GFX files : eventpictures.gfx , goals.gfx , goals_shine.gfx
 
 ### Concept :
 
-<img src="images/HOI4-QuickInsertGFX-Concept.png" width="80%">
+<img src="images/HOI4-QuickInsertGFX-Concept.png" width="100%">
 
 More tutorials...coming soon.
