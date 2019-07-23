@@ -4,7 +4,7 @@
 ![GitHub](https://img.shields.io/github/license/pongmadee/HOI4-QuickInsertGFX.svg)
 
 # HOI4-QuickInsertGFX
-This program was created to work with [FocusTreeAndEventManager](https://github.com/pongmadee/FocusTreeAndEventManager) to help add mod's images file information to the mod's interface directory(eventpictures.gfx , goals.gfx , goals_shine.gfx). However, you can apply it to your mod without FocusTreeAndEventManager tool.
+This program was created to work with [FocusTreeAndEventManager](https://github.com/pongmadee/FocusTreeAndEventManager) to help add mod's images file information to the mod's interface directory(eventpictures.gfx , goals.gfx , goals_shine.gfx). However, you can apply it to your mod without [FocusTreeAndEventManager tool](https://github.com/pongmadee/FocusTreeAndEventManager).
 
 #### [Download the lastest release](https://github.com/pongmadee/HOI4-QuickInsertGFX/releases)
 
