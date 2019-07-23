@@ -14,7 +14,7 @@ This program was created to work with [FocusTreeAndEventManager](https://github.
 | <img src="images/screenshot01.png"> | 1. Click to set game directory <br />  2. Click to set mod directory <br /> 3. Click Export to create new *.gfx files in mod's interface directory. <br /> |
 
 
-### Concept : How does it work
+### How does it work
 <img src="images/HOI4-QuickInsertGFX-Concept.png">
 
 
