@@ -3,6 +3,7 @@
 ![GitHub](https://img.shields.io/github/license/pongmadee/HOI4-QuickInsertGFX.svg)
 
 # HOI4-QuickInsertGFX
+#### [Download the lastest release](https://github.com/pongmadee/HOI4-QuickInsertGFX/releases)
 Supports GFX files : eventpictures.gfx , goals.gfx , goals_shine.gfx
 
 ### Concept :
