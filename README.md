@@ -18,5 +18,5 @@ This program was created to work with [FocusTreeAndEventManager](https://github.
 <img src="images/HOI4-QuickInsertGFX-Concept.png">
 
 
-### Used librairies
+### Used libraries
 - ANTLR4 : A powerful parser generator. 
