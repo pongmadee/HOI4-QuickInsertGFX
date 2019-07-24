@@ -7,7 +7,7 @@
 This program was created to work with [FocusTreeAndEventManager](https://github.com/pongmadee/FocusTreeAndEventManager) help to add mod's images file information (event pictures & goal/focus images) to the mod's interface directory. However, you can apply it to your mod without FocusTreeAndEventManager tool.
 
 ## Requirements
-- Java 8+ [Download](https://www.java.com/en/download/)
+- Java 8+
 
 ## [Download the lastest release](https://github.com/pongmadee/HOI4-QuickInsertGFX/releases)
 
