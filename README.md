@@ -6,17 +6,23 @@
 # HOI4-QuickInsertGFX
 This program was created to work with [FocusTreeAndEventManager](https://github.com/pongmadee/FocusTreeAndEventManager) help to add mod's images file information (event pictures & goal/focus images) to the mod's interface directory. However, you can apply it to your mod without FocusTreeAndEventManager tool.
 
-### [Download the lastest release](https://github.com/pongmadee/HOI4-QuickInsertGFX/releases)
+## Requirements
+- Java 8+ [Download](https://www.java.com/en/download/)
 
-### How to use
+## [Download the lastest release](https://github.com/pongmadee/HOI4-QuickInsertGFX/releases)
+
+## How to use
 | --- | Description |
 | --- | --- |
 | <img src="images/screenshot01.png"> | 1. Click to set game directory <br />  2. Click to set mod directory <br /> 3. Click Export to create new *.gfx files in mod's interface directory. <br /> |
 
 
-### How does it work
+## How does it work
 <img src="images/HOI4-QuickInsertGFX-Concept.png">
 
 
-### Used libraries
+## Used libraries
 - ANTLR4 : A powerful parser generator. 
+
+## License
+This project is licensed under the terms of the MIT license.
