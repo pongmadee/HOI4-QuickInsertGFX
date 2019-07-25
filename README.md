@@ -4,7 +4,7 @@
 ![GitHub](https://img.shields.io/github/license/pongmadee/HOI4-QuickInsertGFX.svg)
 
 # HOI4-QuickInsertGFX
-This program was created to work with [FocusTreeAndEventManager](https://github.com/pongmadee/FocusTreeAndEventManager) help to add mod's images file information (event pictures & goal/focus images) to GFX files in the mod's interface directory. However, you can apply it to your mod without FocusTreeAndEventManager tool.
+This program was created to work with [FocusTreeAndEventManager](https://github.com/pongmadee/FocusTreeAndEventManager), help to add mod's images file information (event pictures & goal/focus images) to GFX files in the mod's interface directory. However, you can apply it to your mod without FocusTreeAndEventManager tool.
 
 ## Requirements
 - Java 8+
