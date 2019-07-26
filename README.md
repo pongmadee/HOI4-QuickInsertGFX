@@ -14,7 +14,7 @@ This program was created to work with [FocusTreeAndEventManager](https://github.
 ## How to use
 | --- | Description |
 | --- | --- |
-| <img src="images/screenshot01.png"> | 1. Click to set game directory <br />  2. Click to set mod directory <br /> 3. Click Export to create new *.gfx files in mod's interface directory. <br /> |
+| <img src="images/screenshot01.png"> | 1. Click to set game directory <br /> e.g. "C:\steamapps\common\Hearts of Iron IV" <br /><br />  2. Click to set mod directory <br /> e.g. "C:\steamapps\common\Hearts of Iron IV\mod\mod_name" <br /><br /> 3. Click Export to create new *.gfx files in mod's interface directory. <br /> |
 
 
 ## How does it work
