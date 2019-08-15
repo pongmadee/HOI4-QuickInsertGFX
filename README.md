@@ -11,6 +11,23 @@ This program was created to work with [FocusTreeAndEventManager](https://github.
 
 ## [Download the lastest release](https://github.com/pongmadee/HOI4-QuickInsertGFX/releases)
 
+## How to run
+#### 1. Run with terminal(Mac/Linux) , command prompt(Windows) e.g.:
+ ```
+ java -jar HOI4-QuickInsertGFX-1.0.0-beta1.jar
+ ```
+#### 2. Run with Jar Launcher (Mac) 
+```
+ Jar Launcher is the program in Mac OS X that launches Java JAR files into the Aqua/Java runtime environment when the JAR file is double clicked.
+```
+#### 3. Run with Java(TM) Platform SE binary (Windows)
+```
+ 3.1. Right-click the Jar file and select Open with from the context menu, then click Choose another app.
+ 3.2. Check the box that says "Always use this app to open .jar files".
+ 3.3. Click More app, then select look for another app on this PC at the bottom.
+ 3.4. Select javaw.exe in your JRE e.g.: 'C:\Program Files\Java\jre1.8.0_221\bin\javaw.exe', then click Open.
+```
+
 ## How to use
 | --- | Description |
 | --- | --- |
