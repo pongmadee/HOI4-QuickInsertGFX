@@ -22,7 +22,7 @@ This program was created to work with [FocusTreeAndEventManager](https://github.
 ```
 #### 3. Run with Java(TM) Platform SE binary (Windows)
 ```
- That launches a JAR files when the JAR file is double clicked.
+ That launches JAR files when the JAR file is double clicked.
  3.1. Right-click the Jar file and select Open with from the context menu, then click Choose another app.
  3.2. Check the box that says "Always use this app to open .jar files".
  3.3. Click More app, then select look for another app on this PC at the bottom.
