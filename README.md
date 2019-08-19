@@ -16,11 +16,11 @@ This program was created to work with [FocusTreeAndEventManager](https://github.
  ```
  java -jar HOI4-QuickInsertGFX-1.0.0-beta1.jar
  ```
-#### 2. Run with Jar Launcher (Mac) 
+#### 2. Run with Jar Launcher (Mac OS X) 
 ```
  Jar Launcher is the program in Mac OS X that launches Java JAR files into the Aqua/Java runtime environment when the JAR file is double clicked.
 ```
-#### 3. Run with Java(TM) Platform SE binary (Windows)
+#### 3. Run with Java(TM) Platform SE binary (Windows 10)
 ```
  That launches JAR files when the JAR file is double clicked.
  3.1. Right-click the Jar file and select Open with from the context menu, then click Choose another app.
