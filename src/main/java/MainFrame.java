@@ -73,15 +73,18 @@ public class MainFrame extends JFrame {
 
                         if(manager.isReadyToExport()){
                             message = manager.exportAll();
+                            manager.clearData();
+                            btnGameDir.setText("[1.Input] Click to Set Game Directory");
+                            btnModDir.setText("[2.Output] Click to Set Mod Directory");
+
                         } else {
-                            message = "<html>Export: <font color='red'>error!</font></html>";
+                            message = "<html>"+manager.getMessage()+"</html>";
                         }
 
                         labInfo.setText(message);
                         return null;
                     }
                 }.execute();
-//                manager.exportAll();
             }
         });
 
