@@ -32,12 +32,22 @@ This program was created to work with [FocusTreeAndEventManager](https://github.
 ## How to use
 | --- | Description |
 | --- | --- |
-| <img src="images/screenshot01.png"> | 1. Click to set game directory <br /> e.g. "C:\steamapps\common\Hearts of Iron IV" <br /><br />  2. Click to set mod directory <br /> e.g. "C:\steamapps\common\Hearts of Iron IV\mod\mod_name" <br /><br /> 3. Click Export to create new *.gfx files in mod's interface directory. <br /> |
+| <img src="images/screenshot01.png"> | 1. Click to set game directory (Input) <br /> e.g. "C:\steamapps\common\Hearts of Iron IV". <br /><br />  2. Click to set mod directory (Output) <br /> e.g. "C:\steamapps\common\Hearts of Iron IV\mod\mod_name". <br /><br /> 2.1. You can add more than one mod directory.(Option) <br /><br /> 3. Click Export to create new *.gfx files in mod's interface directory. <br /> |
 
 
-## How does it work
+## How it work
 <img src="images/HOI4-QuickInsertGFX-Concept.png">
 
+
+## Changelog
+v1.1.0
+- Add support images for Mod(s) option
+
+v1.0.1
+- Add Error Handling
+
+v1.0.0
+- Initial version
 
 ## Used libraries
 - ANTLR4 : A powerful parser generator. 
