@@ -127,19 +127,31 @@ public class MainFrame extends JFrame {
                         //import mod *.dds files to create list of Sprite Object
                         //merge list of Sprite Object
                         //export to the mod folder
-                        String message;
 
                         if(manager.isReadyToExport()){
-                            message = manager.exportAll();
-                            manager.clearData();
-                            btnGameDir.setText("[1.Input] Click to Set Game Directory");
-                            btnModDir.setText("[2.Output] Click to Set Mod Directory");
+                            manager.exportAll(new EventHandler() {
+                                @Override
+                                public void onSuccess(String message) {
+                                    labInfo.setText(message);
+                                    manager.clearData();
+                                    btnGameDir.setText("[1.Input] Click to Set Game Directory");
+                                    btnModDir.setText("[2.Output] Click to Set Mod Directory");
+                                    modsPanel.removeAll();
+                                    modsPanel.validate();
+                                    modsPanel.repaint();
+                                }
+
+                                @Override
+                                public void onError(String message) {
+                                    labInfo.setText(message);
+                                }
+                            });
 
                         } else {
-                            message = "<html>"+manager.getMessage("")+"</html>";
+                            String message = "<html>"+manager.getMessage("")+"</html>";
+                            labInfo.setText(message);
                         }
 
-                        labInfo.setText(message);
                         return null;
                     }
                 }.execute();

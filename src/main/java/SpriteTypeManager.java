@@ -17,15 +17,19 @@ public class SpriteTypeManager {
     private String gamePath;
     private File modDir;
 
+    //base data from game folder
     private List<SpriteType> eventSpriteTypes,goalSpriteTypes,goal_shineSpriteTypes;
     private Set<String> eventSpriteTypesNameSet,goalSpriteTypesNameSet,goal_shineSpriteTypesNameSet;
+    //cloned data from base for try to export
+    private List<SpriteType> cloned_eventSpriteTypes,cloned_goalSpriteTypes,cloned_goal_shineSpriteTypes;
+    private Set<String> cloned_eventSpriteTypesNameSet,cloned_goalSpriteTypesNameSet,cloned_goal_shineSpriteTypesNameSet;
 
     private Map<String,ModData> extra_mod;
 
     private enum Flag {
         INIT,
         EVENT_PIC_DUPLICATE ,GOAL_IMG_DUPLICATE ,INVALID_GAME_PATH ,INVALID_MOD_PATH ,INPUT_EQU_OUTPUT
-        , MOD_DUPLICATE
+        ,MOD_DUPLICATE
     }
     private EnumSet<Flag> flags;
 
@@ -205,20 +209,31 @@ public class SpriteTypeManager {
         return result;
     }
 
-    public String exportAll(){
+    public void exportAll(EventHandler handler){
+
+        cloned_eventSpriteTypes = new ArrayList<>(eventSpriteTypes);
+        cloned_goalSpriteTypes = new ArrayList<>(goalSpriteTypes);
+        cloned_goal_shineSpriteTypes = new ArrayList<>(goal_shineSpriteTypes);
+
+        cloned_eventSpriteTypesNameSet = new HashSet<>(eventSpriteTypesNameSet);
+        cloned_goalSpriteTypesNameSet = new HashSet<>(goalSpriteTypesNameSet);
+        cloned_goal_shineSpriteTypesNameSet = new HashSet<>(goal_shineSpriteTypesNameSet);
+
         if( isReadyToExport() && appendGFX_DDSModData() && appendExtraGFX_DDSModData() ){
 
             //do export
-            exportFile("eventpictures" , eventSpriteTypes);
-            exportFile("goals" ,goalSpriteTypes);
-            exportFile("goals_shine" ,goal_shineSpriteTypes);
+            exportFile("eventpictures", cloned_eventSpriteTypes );
+            exportFile("goals" ,cloned_goalSpriteTypes);
+            exportFile("goals_shine" ,cloned_goal_shineSpriteTypes);
 
-            return "<html>Export: <font color='green'>Done!, cleared all data.</font></html>";
+            //return "<html>Export: <font color='green'>Done!, cleared all data.</font></html>";
+            handler.onSuccess("<html>Export: <font color='green'>Done!, cleared all data.</font></html>");
 
         } else {
             //can't export all files
             System.out.println("can't export all files");
-            return "<html>"+ this.getMessage("") + "</html>";
+            //return "<html>"+ this.getMessage("") + "</html>";
+            handler.onError("<html>"+ this.getMessage("") + "</html>");
         }
     }
 
@@ -275,6 +290,7 @@ public class SpriteTypeManager {
 
     private boolean appendGFX_DDSModData(){
 
+
         boolean result1 = true;
         File[] files_eventpictures = new File(modDir.getPath() +"/gfx/event_pictures").listFiles();
         if (files_eventpictures != null) {
@@ -284,9 +300,9 @@ public class SpriteTypeManager {
                 String name = "\"GFX_" + tokenizer.nextToken() + "\"";
                 String texturefile = "\"gfx/event_pictures/" + file_event.getName() + "\"";
 
-                if (!eventSpriteTypesNameSet.contains(name)) {
-                    eventSpriteTypesNameSet.add(name);
-                    eventSpriteTypes.add(new SpriteType(name, texturefile));
+                if (!cloned_eventSpriteTypesNameSet.contains(name)) {
+                    cloned_eventSpriteTypesNameSet.add(name);
+                    cloned_eventSpriteTypes.add(new SpriteType(name, texturefile));
                 } else {
                     flags.add(Flag.EVENT_PIC_DUPLICATE);
                     result1 = false;
@@ -303,14 +319,14 @@ public class SpriteTypeManager {
                 String name = "\"GFX_" + tokenizer.nextToken() + "\"";
                 String texturefile = "\"gfx/interface/goals/" + file_goal.getName() + "\"";
 
-                if (!goalSpriteTypesNameSet.contains(name)) {
-                    goalSpriteTypesNameSet.add(name);
-                    goalSpriteTypes.add(new SpriteType(name, texturefile));
+                if (!cloned_goalSpriteTypesNameSet.contains(name)) {
+                    cloned_goalSpriteTypesNameSet.add(name);
+                    cloned_goalSpriteTypes.add(new SpriteType(name, texturefile));
 
                     name = name.replace("\"", "");
 
-                    if (!goal_shineSpriteTypesNameSet.contains(name + "_shine")) {
-                        goal_shineSpriteTypesNameSet.add(name + "_shine");
+                    if (!cloned_goal_shineSpriteTypesNameSet.contains(name + "_shine")) {
+                        cloned_goal_shineSpriteTypesNameSet.add(name + "_shine");
 
                         SpriteType new_shineSpriteType = new SpriteType("\"" + name + "_shine\"", texturefile);
 
@@ -347,7 +363,7 @@ public class SpriteTypeManager {
                         new_shineSpriteType.addAnimation(animation1);
                         new_shineSpriteType.setLegacy_lazy_load("no");
 
-                        goal_shineSpriteTypes.add(new_shineSpriteType);
+                        cloned_goal_shineSpriteTypes.add(new_shineSpriteType);
 
                     }
 
@@ -385,9 +401,9 @@ public class SpriteTypeManager {
                 String name = "\"GFX_" + tokenizer.nextToken() + "\"";
                 String texturefile = "\"gfx/event_pictures/" + file_event.getName() + "\"";
 
-                if (!eventSpriteTypesNameSet.contains(name)) {
-                    eventSpriteTypesNameSet.add(name);
-                    eventSpriteTypes.add(new SpriteType(name, texturefile));
+                if (!cloned_eventSpriteTypesNameSet.contains(name)) {
+                    cloned_eventSpriteTypesNameSet.add(name);
+                    cloned_eventSpriteTypes.add(new SpriteType(name, texturefile));
                 } else {
                     flags.add(Flag.EVENT_PIC_DUPLICATE);
                     result1 = false;
@@ -404,14 +420,14 @@ public class SpriteTypeManager {
                 String name = "\"GFX_" + tokenizer.nextToken() + "\"";
                 String texturefile = "\"gfx/interface/goals/" + file_goal.getName() + "\"";
 
-                if (!goalSpriteTypesNameSet.contains(name)) {
-                    goalSpriteTypesNameSet.add(name);
-                    goalSpriteTypes.add(new SpriteType(name, texturefile));
+                if (!cloned_goalSpriteTypesNameSet.contains(name)) {
+                    cloned_goalSpriteTypesNameSet.add(name);
+                    cloned_goalSpriteTypes.add(new SpriteType(name, texturefile));
 
                     name = name.replace("\"", "");
 
-                    if (!goal_shineSpriteTypesNameSet.contains(name + "_shine")) {
-                        goal_shineSpriteTypesNameSet.add(name + "_shine");
+                    if (!cloned_goal_shineSpriteTypesNameSet.contains(name + "_shine")) {
+                        cloned_goal_shineSpriteTypesNameSet.add(name + "_shine");
 
                         SpriteType new_shineSpriteType = new SpriteType("\"" + name + "_shine\"", texturefile);
 
@@ -448,7 +464,7 @@ public class SpriteTypeManager {
                         new_shineSpriteType.addAnimation(animation1);
                         new_shineSpriteType.setLegacy_lazy_load("no");
 
-                        goal_shineSpriteTypes.add(new_shineSpriteType);
+                        cloned_goal_shineSpriteTypes.add(new_shineSpriteType);
 
                     }
 
@@ -495,6 +511,12 @@ public class SpriteTypeManager {
         this.eventSpriteTypesNameSet.clear();
         this.goalSpriteTypesNameSet.clear();
         this.goal_shineSpriteTypesNameSet.clear();
+        this.cloned_eventSpriteTypes.clear();
+        this.cloned_goalSpriteTypes.clear();
+        this.cloned_goal_shineSpriteTypes.clear();
+        this.cloned_eventSpriteTypesNameSet.clear();
+        this.cloned_goalSpriteTypesNameSet.clear();
+        this.cloned_goal_shineSpriteTypesNameSet.clear();
         this.flags.clear();
         this.flags = EnumSet.of(Flag.INIT);
         this.fileEventSrc = null;
@@ -502,7 +524,8 @@ public class SpriteTypeManager {
         this.fileGoalShineSrc = null;
         this.gamePath = "";
         this.modDir = null;
+        this.extra_mod.clear();
 
-        System.out.println("Cleared data");
+        System.out.println("Cleared all data");
     }
 }
