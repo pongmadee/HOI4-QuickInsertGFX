@@ -33,6 +33,14 @@ public class SpriteType implements Comparable<SpriteType> {
         legacy_lazy_load = "";
     }
 
+    public SpriteType(SpriteType another){
+        this.name = another.getName();
+        this.texturefile = another.getTexturefile();
+        this.effectFile = another.getEffectFile();
+        this.animations = another.getAnimations();
+        this.legacy_lazy_load = another.getLegacy_lazy_load();
+    }
+
     @Override
     public int compareTo(SpriteType o) {
 
