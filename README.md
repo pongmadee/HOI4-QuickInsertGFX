@@ -42,6 +42,7 @@ This program was created to work with [FocusTreeAndEventManager](https://github.
 ## Changelog
 v1.1.0
 - Add support images for Mod(s) option
+- Add Event Handler
 
 v1.0.1
 - Add Error Handling

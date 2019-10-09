@@ -91,7 +91,7 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 isLookingToRemoveMod = true;
-                labInfo.setText("Click mod button to remove.");
+                labInfo.setText("Click mod button in below panel to remove.");
             }
         });
 
